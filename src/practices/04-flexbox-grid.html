@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>플렉스 박스와 그리드</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.9/variable/pretendardvariable.min.css" integrity="sha512-0qT1XfdzuH6iU1HXY6Ox53EBCSxOesNUu5mx1czNy3u/TQ5QPRmvhJN+Wwxj4OY4NQjQwFVib3UqxFdEQc7BTg==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./../styles/main.css" />
+  </head>
+  <!-- body 요소의 기본 웹폰트를 프리텐다드(Pretendard) 글꼴로 설정, 배경색상(slate-900), 기본 글자색상(white), 패딩 값 20px -->
+  <body class="font-pre bg-slate-900 text-white p-5">
+    <!-- 대제목의 글자크기 지정(4xl), 가운데 정렬, 마진 값 20px -->
+    <h1 class="text-4xl text-center m-5">플렉스 박스와 그리드</h1>
+    <!-- 자식 요소 간 여백 20px로 지정 -->
+    <div class="space-y-5">
+      <!-- 플렉스 박스를 활용한 레이아웃 -->
+      <!-- 가로 크기(384px) 지정 후 마진을 이용한 가운데 배치, 테두리 1px 및 테두리 선 색상 white, 플렉스 컨테이너, 갭 16px -->
+      <div class="w-96 mx-auto flex gap-4 border border-white">
+        <!-- 글자크기(3xl), 글자색상(blue-700), 플렉스 아이템이 축소되지 않도록 shrink 값을 0으로 설정 -->
+        <div class="text-3xl text-blue-700 shrink-0">태킷 스쿨</div>
+        <!-- 플렉스 컨테이너, 컬럼 방향 배치, 갭 16px -->
+        <div class="flex flex-col gap-4">
+          <!-- 글자크기(2xl), 글자색상(orange-500), 플렉스 아이템의 순서를 마지막으로 배치 -->
+          <span class="text-2xl text-orange-500 order-1">프론트엔드 11기</span>
+          <p>'함께 성장하는 바른 교육' 이듬(EUID)과 멋쟁이 사자처럼 태킷(Techit) 스쿨이 만났습니다.</p>
+        </div>
+      </div>
+      <hr />
+      <!-- 그리드를 활용한 레이아웃 -->
+      <!-- 가로 크기(384px) 지정 후 마진을 이용한 가운데 배치, 테두리 1px 및 테두리 선 색상 white -->
+      <!-- 그리드 컨테이너, 갭 16px, 그리드 컬럼(2column), 각 컬럼의 크기 80px과 150px, 그리드 로우(2row), 각 행의 높이는 각각 100px과 1fr 그리드 컨테이너 안에서 가로 세로 가운데 정렬(place-content) -->
+      <div class="w-96 mx-auto border border-white grid gap-4 grid-cols-[80px_150px] grid-rows-[100px_1fr] place-content-center">
+        <!-- 글자크기(3xl), 글자색상(blue-700), 2개의 행을 병합하여 배치(span-2), 배경색상(yellow-200) -->
+        <h2 class="text-3xl text-blue-700 row-span-2 bg-yellow-200">태킷 스쿨</h2>
+        <!-- 글자크기(xl), 글자색상(orange-500), 배경색상(gray-700), 그리드 아이템 배치 행 1 / 2, 열 2 / 3, 셀 내에서 세로 가운데 정렬(self) -->
+        <h3 class="text-xl text-orange-500 bg-gray-700 row-start-1 row-end-2 col-start-2 col-end-3 place-self-center">프론트엔드 11기</h3>
+        <!-- 그리드 아이템 배치 행 2 / 3, 열 2 / 3, 배경색상(pink-800) -->
+        <p class="row-start-2 row-end-3 col-start-2 col-end-3 bg-pink-800">'함께 성장하는 바른 교육' 이듬(EUID)과 멋쟁이 사자처럼 태킷(Techit) 스쿨이 만났습니다.</p>
+      </div>
+    </div>
+  </body>
+</html>
