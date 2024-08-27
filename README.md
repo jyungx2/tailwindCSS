@@ -30,8 +30,9 @@ git run serve
 git start
 ```
 
-upstream의 teacher 브랜치의 업데이트 된 내용을 가져오기
+## 빌드(watch) 및 라이브 서버 중지하기
 
 ```sh
-git pull upstream teacher
+# 맥, 윈도우 공통
+Ctrl + C
 ```
